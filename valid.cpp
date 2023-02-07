@@ -15,7 +15,7 @@ using namespace std;
 
     // using a boolean function to check if the number that the user inputted is in the range 0 < n < 100
 bool valid_value(int integer){
-    if(0 > integer || integer > 100){   // is the integer less than 0 or is it greater than 100?
+    if(0 >= integer || integer >= 100){   // is the integer less than 0 or is it greater than 100?
         return true;
     }
     else{
