@@ -36,9 +36,11 @@ int main() {
         // creating a do while loop
     do {
             // creating a for loop to print the value of each element in the array 
+        
         for (int i = 0; i < capacity; i++) {
-            cout << myData[i] << endl;
+            cout << myData[i] << " ";
         }
+        cout << " " << endl;
 
             // get the index and value from user
         cout << "Input index: " << endl; 
