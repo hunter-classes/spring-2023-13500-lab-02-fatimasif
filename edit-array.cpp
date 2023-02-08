@@ -19,107 +19,36 @@ and go back to the step 3. Otherwise, if index i is out of range, the program ex
 #include <iostream>
 using namespace std;
 
-int main() {
-        // creating the array and variables
-    const int CAPACITY = 10;    // the CAPACITY is the the amount of elements the array can hold and it is set with "const"
-    int myData[CAPACITY];    // the array myData holds 10 elements (CAPACITY)
+const int capacity = 10;
 
-        // creating a for loop to fill all of the array's elements with value 1
-    for (int i = 0; i < CAPACITY; i++) {
+int main() {
+    int myData[capacity];
+
+    // Fill array with value 1
+    for (int i = 0; i < capacity; i++) {
         myData[i] = 1;
     }
 
-    int index, value;
+    int index;
+    int value;
     do {
-            // Print the array
-        cout << "myData: [";
-        for (int i = 0; i < CAPACITY; i++) {
-            cout << myData[index] << endl;
+            // Print array
+        for (int i = 0; i < capacity; i++) {
+            cout << myData[i] << endl;
         }
-       // cout << "]" << endl;
 
-            // Get the new index and value from theuser
-        cout << "Enter a cell index. " << endl;
+            // Get index and value from user
+        cout << "Input index: " << endl; 
         cin >> index;
-        cout << "Enter its new value. " << endl;
+        cout << "Input value:60 " << endl;
         cin >> value;
 
-            // Update the array at the index i if i is valid
-        if (index >= 0 && index < CAPACITY) {
+            // Update array at index i if i is valid
+        if (index >= 0 && index < capacity) {
+            cout << "The new array is: " << endl;
             myData[index] = value;
         }
-    } while (index >= 0 && index < CAPACITY);
+    } while (index >= 0 && index < capacity);
 
     return 0;
 }
-
-
-
-
-
-
-
-
-
-
-// #include <iostream>
-// using namespace std;
-
-// int main()
-// {
-//         // creating the array and variables
-//     const int CAPACITY = 10;    // the CAPACITY is the the amount of elements the array can hold and it is set with "const"
-//     double myData[CAPACITY];    // the array myData holds 10 elements (CAPACITY)
-
-//         // creating a for loop to fill all of the array's elements with value 1
-//     for (int i = 0; i < CAPACITY; i++){
-//         myData[i]=1;
-//     }
-//         // creating a for loop to print the value of each element in the array 
-//     for (int i = 0; i < CAPACITY; i++){
-//         cout << myData[9] << endl;
-//     }
-
-//         // asking the user to input the cell index i, and its new value v
-    
-//     int index;
-//     double value;
-
-//     while(true){
-//         cout << "Please choose a number for the index." << endl;
-//         cin >> index;
-//         cout << "Please enter a new number as the value." << endl;
-//         cin >> value;
-//         if(index >= 0 && index < 10){
-//             myData[index] = value;
-//         }
-//         else{
-//             break;
-//         }
-
-//         for (int i = 0; i < CAPACITY; i++){
-//             cout << myData[index] << endl;
-//         }
-
-
-//     }
-
-
-
-//     // double input;
-//     // cout << "Please give me a cell number from 1 to 10" << endl;
-//     // while(cin >> size){
-//     //     if (size <= CAPACITY){
-//     //         cout << "Please give me a value" << endl;
-//     //         cin >> input;
-//     //         myData[size] = input;
-//     //         for (int i = 0; i < CAPACITY; i++){
-//     //         cout << myData[9] << endl;
-//     //         }
-//     //     }
-//     // }
-
-//     return 0;
-
-
-// }
