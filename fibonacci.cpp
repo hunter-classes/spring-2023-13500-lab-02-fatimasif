@@ -9,7 +9,6 @@ print all Fibonacci numbers from F(0) to F(59).
 */
 
 #include <iostream>
-using namespace std;
 
     // creating a constant value for the array 
 const int capacity = 60;
@@ -26,9 +25,9 @@ int main()
        fib[i] = fib[i-1] + fib[i-2];    // and all the following ones can be computed iteratively 
     }
         // print the fibonacci numbers 
-    cout << "The fibonacci numbers are:" << endl;
+    std::cout << "The fibonacci numbers are:" << "\n";
     for(int i = 0; i < capacity; i++){  // use a for loop to go through the array 
-        cout << fib[i] << endl;
+        std::cout << fib[i] << "\n";
     }
 
     return 0;

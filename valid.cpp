@@ -11,7 +11,6 @@ After a valid value is obtained, print this number n squared.
 */
 
 #include <iostream>
-using namespace std;
 
     // using a boolean function to check if the number that the user inputted is in the range 0 < n < 100
 bool valid_value(int integer){
@@ -29,18 +28,18 @@ int main()
     int integer;        
     double squared;     // double holds larger values
 
-    cout << "Please input an integer between the range 0 < n < 100." << endl;
-    cin >> integer;     // taking in user input 
+    std::cout << "Please input an integer between the range 0 < n < 100." << "\n";
+    std::cin >> integer;     // taking in user input 
 
         // using a while loop to check if the users input is in the range or not
         // if the input is not in the range then the loop will continue to run
     while(valid_value(integer)){
-        cout << "Please input a number in the range." << endl;
-        cin >> integer;
+        std::cout << "Please input a number in the range." << "\n";
+        std::cin >> integer;
     }
         // mathematical equation to square the number the user inputted if it is in the range
     squared = integer * integer;
-    cout << "The number you input is " << integer << " and when squared it is " << squared << "." << endl;
+    std::cout << "The number you input is " << integer << " and when squared it is " << squared << "." << "\n";
 
 return 0;
 }

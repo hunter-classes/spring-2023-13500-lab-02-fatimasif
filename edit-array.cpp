@@ -17,7 +17,6 @@ and go back to the step 3. Otherwise, if index i is out of range, the program ex
 */
 
 #include <iostream>
-using namespace std;
 
 const int capacity = 10;    // the CAPACITY is the the amount of elements the array can hold and it is set with "const"
 
@@ -38,19 +37,19 @@ int main() {
             // creating a for loop to print the value of each element in the array 
         
         for (int i = 0; i < capacity; i++) {
-            cout << myData[i] << " ";
+            std::cout << myData[i] << " ";
         }
-        cout << " " << endl;
+        std::cout << " " << "\n";
 
             // get the index and value from user
-        cout << "Input index: " << endl; 
-        cin >> index;
-        cout << "Input value: " << endl;
-        cin >> value;
+        std::cout << "Input index: " << "\n"; 
+        std::cin >> index;
+        std::cout << "Input value: " << "\n";
+        std::cin >> value;
 
             // use an if statement to update the array at index if the index is valid
         if (index >= 0 && index < capacity) {
-            cout << "The new array is: " << endl;
+            std::cout << "The new array is: " << "]\n";
             myData[index] = value;
         }
     } while (index >= 0 && index < capacity);   // continue until the index no longer works
